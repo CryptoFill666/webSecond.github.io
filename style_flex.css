@@ -1,0 +1,129 @@
+/* ================================================= */
+/* 1. УНІФІКОВАНІ БАЗОВІ СТИЛІ (КОЛЬОРИ І КОНТЕНТ) */
+/* (ЦЕЙ БЛОК ПОВИНЕН БУТИ ІДЕНТИЧНИМ У ВСІХ CSS-ФАЙЛАХ) */
+/* ================================================= */
+/* ... (ВСТАВТЕ ВСІ БАЗОВІ СТИЛІ З ПОПЕРЕДНЬОЇ ВІДПОВІДІ) ... */
+/* ================================================= */
+/* 1. УНІФІКОВАНІ БАЗОВІ ТА КОНТЕНТНІ СТИЛІ (ВСІ ВЕРСТКИ) */
+/* ================================================= */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центруємо вміст, але дозволяємо йому бути широким */
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f0f0f0; /* Легкий фон */
+}
+
+/* Навігаційний блок перемикача */
+.layout-nav {
+    width: 98%;
+    max-width: 1300px;
+    margin: 10px auto;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+}
+/* ... (стилі для .layout-nav a, h2 залишаються) ... */
+
+/* Стилі для ВСІХ блоків контейнера */
+.block {
+    padding: 15px;
+    border: 1px solid #EAEAEA;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Кольори та спеціальні стилі (як на зразку) */
+.block-1, .block-7 { background-color: #D3E0F0; } /* Блакитний */
+.block-2, .block-5 { background-color: #F8E3D4; } /* Помаранчевий */
+.block-3, .block-6 { background-color: #E6F3E6; } /* Зелений */
+.block-4 { background-color: white; } /* Білий */
+
+/* Стилі для елементів контенту */
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.sidebar-menu a {
+    display: block;
+    padding: 10px 15px;
+    background-color: #007bff; /* Синій фон меню */
+    color: white;
+    text-decoration: none;
+    margin-bottom: 5px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.small-ad-space p { font-style: italic; font-weight: bold; }
+
+/* Стилі для поля 'y' (x не відображається у вашому знімку) */
+.block-7 .input-box { position: absolute; right: 15px; }
+
+/* ================================================= */
+/* 2. РОЗМІЩЕННЯ (УНІКАЛЬНО ДЛЯ КОЖНОГО ФАЙЛУ)       */
+/* ================================================= */
+
+/* ... (Специфічний код для Grid, Flex, або Classic йде тут) ... */
+
+/* Приклад кольорів: */
+.block-1, .block-7 { background-color: #D3E0F0; } /* Блакитний */
+.block-2, .block-5 { background-color: #F8E3D4; } /* Помаранчевий */
+.block-3, .block-6 { background-color: #E6F3E6; } /* Зелений */
+.block-4 { background-color: white; } /* Білий */
+
+/* Стилі для посилань меню */
+.sidebar-menu a {
+    display: block;
+    padding: 10px 15px;
+    background-color: #007bff; /* Синій */
+    color: white;
+    text-decoration: none;
+    margin-bottom: 5px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* ================================================= */
+/* 2. РОЗМІЩЕННЯ (СПЕЦИФІЧНЕ ДЛЯ FLEXBOX) */
+/* ================================================= */
+.container {
+    width: 98%;
+    max-width: 1300px;
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+}
+.block-1, .block-7 { flex-shrink: 0; height: auto; }
+
+.center-section {
+    display: flex; /* Горизонтальне розміщення 2, center-column, 5 */
+    flex-grow: 1;
+    width: 100%;
+}
+
+.block-2, .block-5 {
+    width: 200px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column; /* КРИТИЧНО: для вертикального меню */
+    padding: 0;
+}
+
+.center-column {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.block-3, .block-6 { flex-shrink: 0; height: 50px; }
+.block-4 { flex-grow: 1; }

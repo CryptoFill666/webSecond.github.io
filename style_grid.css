@@ -1,0 +1,118 @@
+/* ==================================== */
+/* 1. ЗАГАЛЬНІ СТИЛІ ТА BODY/НАВІГАЦІЯ  */
+/* ==================================== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центруємо основний контент */
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Стилі для навігації */
+.layout-nav {
+    width: 98%; /* Ширина, щоб візуально відповідала контейнеру */
+    max-width: 1300px;
+    margin: 10px auto;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+.layout-nav a { /* ... (стилі для посилань) ... */ }
+
+/* ==================================== */
+/* 2. GRID КОНТЕЙНЕР (ПОВНА ШИРИНА)     */
+/* ==================================== */
+.container {
+    width: 98%; /* Займає майже всю ширину */
+    max-width: 1300px; /* Обмеження для великих моніторів */
+    height: auto;
+    min-height: 700px;
+    border: 1px solid #ccc;
+
+    /* GRID НАЛАШТУВАННЯ */
+    display: grid;
+    grid-template-columns: 200px 1fr 200px; /* 200px - меню, 1fr - центр, 200px - тренди */
+    grid-template-rows: 70px 50px 1fr 50px 40px; /* Фіксована шапка, анонси та футер */
+    gap: 0;
+}
+
+/* ==================================== */
+/* 3. КОЛЬОРИ ТА РОЗМІЩЕННЯ БЛОКІВ GRID */
+/* ==================================== */
+.block {
+    padding: 15px;
+    border: 1px solid #EAEAEA;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* БЛОК 1 (HEADER) */
+.block-1 {
+    grid-column: 1 / 4;
+    background-color: #D3E0F0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+/* БЛОК 7 (FOOTER) */
+.block-7 {
+    grid-column: 1 / 4;
+    background-color: #D3E0F0;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 0.9em;
+    position: relative;
+    padding-left: 15px;
+}
+.block-7 .input-box { position: absolute; right: 15px; } /* Позиціонування Y */
+
+/* БЛОК 2 (ЛІВЕ МЕНЮ) */
+.block-2 {
+    grid-column: 1;
+    grid-row: 2 / 5; /* 3 рядки: 2, 3, 4 */
+    background-color: #F8E3D4;
+    padding: 0;
+}
+.sidebar-menu a { /* Стилі для посилань меню */
+    display: block;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+/* БЛОКИ 3, 4, 6 (ЦЕНТР) */
+.block-3 {
+    grid-column: 2; grid-row: 2;
+    background-color: #E6F3E6;
+    justify-content: center;
+}
+.block-4 {
+    grid-column: 2; grid-row: 3;
+    background-color: white;
+}
+.block-6 {
+    grid-column: 2; grid-row: 4;
+    background-color: #E6F3E6;
+    justify-content: center;
+}
+
+/* БЛОК 5 (ПРАВА ПАНЕЛЬ) */
+.block-5 {
+    grid-column: 3;
+    grid-row: 2 / 5;
+    background-color: #F8E3D4;
+}
